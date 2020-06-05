@@ -28,6 +28,7 @@ module.exports = (env, argv) => {
         },
       };
   const htmlWebpackPlugins = views.map((view) => new HtmlWebpackPlugin(view));
+
   const getLocalIdent = (context, localIdentName, localName, options) => {
     const fileNameOrFolder = context.resourcePath.match(
       /index\.module\.(css|scss|sass)$/
@@ -62,7 +63,16 @@ module.exports = (env, argv) => {
           use: {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/preset-env"],
+              presets: ["@babel/preset-env", "@babel/preset-react"],
+              plugins: [
+                ["@babel/plugin-transform-react-jsx"],
+                [
+                  "@babel/plugin-transform-runtime",
+                  {
+                    regenerator: true,
+                  },
+                ],
+              ],
             },
           },
         },

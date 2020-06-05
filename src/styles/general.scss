@@ -23,8 +23,65 @@ html {
 body {
   padding: 0;
   margin: 0;
+  font-family: "vcr_osd_monoregular";
+  background-color: #7dd1ff;
 }
 
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+  font-family: "vcr_osd_monoregular";
+  src: url("./../fonts/vcr_osd_mono_1.001-webfont.woff2") format("woff2"),
+    url("./../fonts/vcr_osd_mono_1.001-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sendmessage {
+  text-align: center;
+
+  h3 {
+    margin-top: 50px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border-bottom: 3px solid #0eaaff;
+}
+
+.interstitial-wrapper {
+  position: relative;
+}
+
+#jsx {
+  .ranking {
+    max-width: 600px;
+    margin: 255px auto 0 auto;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-around;
+        list-style: none;
+        text-align: left;
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
