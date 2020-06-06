@@ -1,4 +1,5 @@
 @import "../styles/canvas.scss";
+@import "../styles/modal.scss";
 
 * {
   box-sizing: border-box;
@@ -25,7 +26,7 @@ body {
   margin: 0;
   color: #fff;
   font-family: "vcr_osd_monoregular";
-  background-color: #000;
+  background-color: #080815;
   background-image: url(http://zajdzik.com/edit/hackathon2020/ergonauts-assets/bg.gif);
   background-repeat: repeat;
 }
@@ -55,7 +56,8 @@ a {
   justify-content: center;
   align-items: center;
   height: 150px;
-  border-bottom: 3px solid #0eaaff;
+  background-image: url(http://zajdzik.com/edit/hackathon2020/ergonauts-assets/200-header.gif);
+  background-position: center;
 }
 
 .interstitial-wrapper {

@@ -627,6 +627,8 @@
             Math.ceil(this.distanceRan)
           );
 
+          window.actualDistance = actualDistance;
+
           if (actualDistance > 0) {
             this.invertTrigger = !(
               actualDistance % this.config.INVERT_DISTANCE

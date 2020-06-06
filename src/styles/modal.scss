@@ -1,0 +1,95 @@
+.modal {
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+}
+
+.popup-content {
+  max-width: 400px;
+}
+
+.modal > .modal-header {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 30px;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.form-wrapper {
+  display: inline-block;
+  margin: 10px auto;
+}
+
+.form-wrapper input {
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+.submit {
+  display: block;
+  margin: 10px auto;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 10px;
+  line-height: 20px;
+  right: 0px;
+  top: -5px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+  border-radius: 0;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
