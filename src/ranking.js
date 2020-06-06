@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-const fetchUsers = async () => {
-  const response = await fetch("https://ergonauts.zajdzik.com/ranking");
-  const data = await response.json();
-  return data;
-};
-
 const UserList = () => {
   const [users, setUsers] = useState(null);
 
-  useEffect(async () => {
-    const resp = await fetchUsers();
-    setUsers(resp);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("https://ergonauts.zajdzik.com/ranking");
+      const data = await response.json();
+      setUsers(data);
+    };
+
+    fetchData();
   }, []);
 
-  console.log(users);
   return (
     <>
       {users && (
