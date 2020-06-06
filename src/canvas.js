@@ -845,6 +845,11 @@
 
       this.tRex.update(100, Trex.status.CRASHED);
 
+      // create and dispatch the event
+      var event = new CustomEvent("modal");
+      window.dispatchEvent(event);
+
+      window.openModal = true;
       // Game over panel.
       if (!this.gameOverPanel) {
         this.gameOverPanel = new GameOverPanel(
