@@ -4,6 +4,7 @@ import Popup from "reactjs-popup";
 export default () => {
   const [inputName, setInputName] = useState(null);
   const [modal, setModal] = useState(null);
+  const [distance, setDistance] = useState(null);
   const inputElement = useRef(null);
 
   const inputChange = (e) => {
@@ -14,7 +15,10 @@ export default () => {
     window.addEventListener("modal", () => {
       setModal(true);
     });
-  });
+    window.addEventListener("distance", (e) => {
+      setDistance(e.detail.distance);
+    });
+  }, []);
 
   const closePopup = () => {
     setModal(false);
@@ -30,7 +34,8 @@ export default () => {
 
     const sendForm = async () => {
       const url = new URL("https://ergonauts.zajdzik.com/ranking");
-      const params = { name: inputName, score: window.actualDistance };
+
+      const params = { name: inputName, score: distance };
       url.search = new URLSearchParams(params).toString();
       fetch(url);
 
@@ -67,7 +72,7 @@ export default () => {
           </a>
           <div className="modal-header"> CONGRATS! </div>
           <div className="content">
-            You get <strong>{window.actualDistance}</strong> points.
+            You get <strong>{distance}</strong> points.
           </div>
           <div className="actions">
             Leave your nickname for Hall of fame!

@@ -627,8 +627,6 @@
             Math.ceil(this.distanceRan)
           );
 
-          window.actualDistance = actualDistance;
-
           if (actualDistance > 0) {
             this.invertTrigger = !(
               actualDistance % this.config.INVERT_DISTANCE
@@ -2222,11 +2220,22 @@
      */
     setHighScore: function (distance) {
       distance = this.getActualDistance(distance);
+      this.setWindowDistance(distance);
       var highScoreStr = (this.defaultString + distance).substr(
         -this.maxScoreUnits
       );
 
       this.highScore = ["10", "11", ""].concat(highScoreStr.split(""));
+    },
+
+    setWindowDistance: function (distance) {
+      var event = new CustomEvent("distance", {
+        detail: {
+          distance: distance,
+        },
+        bubbles: true,
+      });
+      window.dispatchEvent(event);
     },
 
     /**
