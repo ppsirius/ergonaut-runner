@@ -1,6 +1,10 @@
 @import "../styles/canvas.scss";
 @import "../styles/modal.scss";
 
+.main-frame-error {
+  border: 1px solid #fff;
+}
+
 * {
   box-sizing: border-box;
   background-repeat: no-repeat;
