@@ -31,6 +31,10 @@
   top: 35px;
   width: 44px;
   transform: scale(1.7);
+
+  @media (min-width: 200px) and (max-width: 1024px) {
+    transform: none;
+  }
 }
 
 .offline .runner-canvas {
