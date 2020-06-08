@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.2",
+    "console-log-plus": "^1.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reactjs-popup": "^1.5.0"

@@ -2080,6 +2080,13 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
+console-log-plus@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/console-log-plus/-/console-log-plus-1.0.7.tgz#155e6ba8c4efeef6a43346bda4c2bac4fc937ab3"
+  integrity sha512-Wq5Z8k2hXq/4h3cJ2/9tcypHWfY5TYyPWSYFBfe3GgPoOAvLT1eehoy2WHKZHWm83fQ21bJD3rz7YmXO3yecIg==
+  dependencies:
+    validate-color "^1.0.8"
+
 constants-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
@@ -7438,6 +7445,11 @@ v8-compile-cache@^2.0.3:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.1.1.tgz#54bc3cdd43317bca91e35dcaf305b1a7237de745"
   integrity sha512-8OQ9CL+VWyt3JStj7HX7/ciTL2V3Rl1Wf5OL+SNTm0yK1KvtReVulksyeRnCANHHuUxHlQig+JJDlUhBt1NQDQ==
+
+validate-color@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/validate-color/-/validate-color-1.0.8.tgz#d127cab834fe4421cc6223bba1804d11d2854412"
+  integrity sha512-PnyY1BrGxvnThjM3JNGl+4ODenq7TdthAYbBKkE3urFx9XlJesOkjQ88p4B+aH819N7CaeHQcU2KIe/2667kAQ==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
