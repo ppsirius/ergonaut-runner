@@ -13,6 +13,7 @@
    * @constructor
    * @export
    */
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;
   function Runner(outerContainerId, opt_config) {
     // Singleton
     if (Runner.instance_) {
