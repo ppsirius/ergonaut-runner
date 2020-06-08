@@ -31,7 +31,7 @@ body {
   width: 100%;
   color: #fff;
   font-family: "vcr_osd_monoregular";
-  background-image: url(http://zajdzik.com/edit/hackathon2020/ergonauts-assets/bg.gif);
+  background-image: url(../views/bg.gif);
   background-repeat: repeat;
 }
 
@@ -64,7 +64,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 150px;
-  background-image: url(https://zajdzik.com/edit/hackathon2020/ergonauts-assets/200-header.gif);
+  background-image: url(../views/200-header.gif);
   background-position: center;
 
   @media (min-width: 200px) and (max-width: 1024px) {
