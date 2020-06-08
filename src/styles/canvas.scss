@@ -2,6 +2,14 @@
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
 
+.runner-container {
+  background-color: rgba(255, 111, 111, 0.5);
+}
+
+.runner-canvas {
+  background-color: rgba(255, 247, 0, 0.5);
+}
+
 .icon {
   -webkit-user-select: none;
   user-select: none;
