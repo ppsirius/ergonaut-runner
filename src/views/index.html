@@ -69,13 +69,23 @@
   </body>
 
   <script>
-    document.onkeydown = function (evt) {
-      evt = evt || window.event;
-      if (evt.keyCode == 32) {
+    window.addEventListener("DOMContentLoaded", (event) => {
+      document
+        .querySelector(".runner-container")
+        .addEventListener("touchend", hideElements, false);
+
+      document.onkeydown = function (evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 32) {
+          hideElements();
+        }
+      };
+
+      function hideElements() {
         var box = document.getElementById("messageBox");
         box.style.visibility = "hidden";
       }
-    };
+    });
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
