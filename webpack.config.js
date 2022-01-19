@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const sassRegex = /\.(scss|sass|css)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 const loaderUtils = require("loader-utils");
@@ -28,6 +29,12 @@ module.exports = (env, argv) => {
         },
       };
   const htmlWebpackPlugins = views.map((view) => new HtmlWebpackPlugin(view));
+
+  const copyPlugin = new CopyPlugin({
+    patterns: [
+      { from:  path.resolve(__dirname, "src", 'views'), to: 'assets/'},
+    ],
+  })
 
   const getLocalIdent = (context, localIdentName, localName, options) => {
     const fileNameOrFolder = context.resourcePath.match(
@@ -152,7 +159,7 @@ module.exports = (env, argv) => {
         clientLogLevel: "silent",
         watchContentBase: true,
       },
-      plugins: [...htmlWebpackPlugins],
+      plugins: [...htmlWebpackPlugins, copyPlugin],
     });
   } else if (isProd) {
     // Production settings
@@ -168,6 +175,7 @@ module.exports = (env, argv) => {
         new MiniCssExtractPlugin({
           filename: "css/[name].css",
         }),
+        copyPlugin,
       ],
       optimization: {
         usedExports: true,
